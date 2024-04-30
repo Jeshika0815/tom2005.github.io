@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>a{text-decoration: none; color:gray;} a:hover{color:skyblue; text-decoration: underline;}</style>
+    <title>Jeshika Minecraft Serverについて</title>
+    <script>
+        window.addEventListener('load', function() {
+            let viol = localStorage.getItem('vio');
+            let key = prompt('パスキーを入れてください。','1329-');
+            let vio = 0;
+            let pcc = "1329-qtxp-5fg7-9865";
+            if(key != pcc){
+                alert('そのコードはパスキーではありません。');
+                vio = vio + 1;
+                localStorage.setItem('vio',vio);
+                location.reload();
+            }if(key === pcc){
+                localStorage.removeItem('vio');
+            }
+            if (viol === 3){
+                location.href="index.html";
+            }
+        });
+    </script>
+</head>
+<body>
+<a href="">Back to HOME</a>
+    <br><br>
+    <input type="text" class="text" id="text" title="入力後欄外でクリックすると実行されます" placeholder="入力"><br>
+    アドレス：<span id="no1"></span><br>
+    ポート：<span id="no2"></span>
+<script>
+const bu = document.getElementById('text');
+bu.addEventListener('blur', function() {
+  let txt = document.getElementById('text');
+  let tex = txt.value;
+  let ot1 = document.getElementById('no1');
+  let ot2 = document.getElementById('no2');
+  if(tex === 'traums'){
+    ot1.innerHTML = "<a href='traum_c.aternos.me'>traum_c.aternos.me</a>";
+    ot2.innerHTML = "46895";
+  }
+});
+</script>
+<script>
+    function help() {
+        alert('注)入力後欄外でクリックすると実行されます。\n１）入力するキーに関してはオーナーから指示をもらって入力すること。\n');
+    }
+</script>
+<br><br>
+&copy;Jeshika<span id="year"></span>｜<a href="#" onclick="help();">ヘルプ</a>｜<a href="index.html#infom">利用時の注意事項</a>
+<script>const dat = new Date(); const year = dat.getFullYear(); let disp = document.getElementById('year'); disp.innerHTML = year;</script>
+</body>
+</html>
