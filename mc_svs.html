@@ -49,6 +49,13 @@ bu.addEventListener('blur', function() {
         alert('注)入力後欄外でクリックすると実行されます。\n１）入力するキーに関してはオーナーから指示をもらって入力すること。\n');
     }
 </script>
+<script>
+    window.addEventListener('keydown',function (q) {
+    if(q.altKey){
+        alert('最終更新日時：' + document.lastModified);
+    }
+});
+</script>
 <br><br>
 &copy;Jeshika<span id="year"></span>｜<a href="#" onclick="help();">ヘルプ</a>｜<a href="index.html#infom">利用時の注意事項</a>
 <script>const dat = new Date(); const year = dat.getFullYear(); let disp = document.getElementById('year'); disp.innerHTML = year;</script>
